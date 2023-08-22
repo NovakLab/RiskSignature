@@ -1,14 +1,13 @@
-# RiskSignature
-This repository contains code and data to reproduce the RNA Risk Signature from, _Multiomic Analysis Identifies a High-Risk Metabolic and TME Depleted Signature that Predicts Early Clinical Failure in DLBCL_. https://doi.org/10.1101/2023.06.07.23290748
+This repository contains code to reproduce the RNA Risk Signature from, Multiomic Analysis Identifies a High-Risk Metabolic and TME Depleted Signature that Predicts Early Clinical Failure in DLBCL. https://doi.org/10.1101/2023.06.07.23290748
 
-__Included__
+Description
 
-1. DLBCL_risk_signature_test.R - R script to reproduce groups (“Low Risk“, “Intermediate Risk”, and “High Risk”)
+“DLBCL_risk_signature_test.R” defines a workflow to reproduce Risk Signature classifications from the publication. Input required is a normalized RNAseq expression. Input data must be formatted with row names as ensemblID and column names as sampleID. It is suggested to length-normalize the input expression with TPM. To generate the score, this workflow implements R package SingScore. An up-regulated geneset and a down-regulated geneset of risk associated features along with a list of background genes are provided. An option is provided to include the “gene_background”. This is the set of attributes included in the original risk score generation.  When set to True the input dataset is subset to contain only genes which are also present in the training dataset. 
 
-2. ndDLBCL_log2TPM+1.csv - Example RNAseq data from paper
+Included
 
-3. risk_signature_genes.csv - Table consisting of RNA risk signature genes and direction
+1. riskSignature.R - R function to which returns a dataframe of score information and risk classification
 
-__Description__
+2. riskgenes - Table consisting of RNA risk signature genes and direction
 
-“DLBCL_risk_signature_test.R” defines a workflow to reproduce RNAsig classifications from the publication. Inputs required are normalized RNAseq expression, an up-regulated geneset, and a down-regulated geneset. Expression data must be formatted with row names ensemblIDs and column names sampleIDs. Provided RNAseq data is log2(TPM+1) transformed. Provided geneset data includes direction. All of the items are available to reproduce results from the paper. However, users may explore the use of this tool on other datasets. In that case, an option is provided to include the “gene background”. This is the set of attributes included in the original risk score generation.  When set to true the input dataset is subset to contain only genes which are also present in the training dataset. 
+3. background - Table consisting of a "universe" of genes analyzed during model training
