@@ -6,7 +6,7 @@ Description
 
 Included
 
-1. riskSignature.R - R function to which returns a dataframe of score information and risk classification
+1. riskSignature.R - R function which returns a dataframe of score information and risk classification
 
 2. riskgenes - Table consisting of RNA risk signature genes and direction
 
