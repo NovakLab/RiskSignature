@@ -1,4 +1,4 @@
-This package contains a function and data to reproduce the RNA Risk Signature from, Multiomic Analysis Identifies a High-Risk Metabolic and TME Depleted Signature that Predicts Early Clinical Failure in DLBCL. https://doi.org/10.1101/2023.06.07.23290748
+This R package contains a function and data to reproduce the RNA Risk Signature from, Multiomic Analysis Identifies a High-Risk Metabolic and TME Depleted Signature that Predicts Early Clinical Failure in DLBCL. https://doi.org/10.1101/2023.06.07.23290748
 
 Description
 
