@@ -1,10 +1,10 @@
-Package: RiskSignature2
-Title: What the Package Does (One Line, Title Case)
+Package: RiskSignature
+Title: ndDLBCL EFS24 Risk Signature
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    c(person("Joseph", "Novak", "novak.joseph@mayo.edu", role = c("aut", "cre")),
+    person("Kerstin", "Wenzl", "kerstin.wenzl@bms.com", role = c("aut")))
+Description: Contains a function to generate EFS24 risk classifications for ndDLBCL RNAseq profiles.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
