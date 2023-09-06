@@ -11,3 +11,6 @@ Included
 2. riskgenes - Table consisting of RNA risk signature genes and direction
 
 3. background - Table consisting of a "universe" of genes analyzed during model training
+
+
+This package depends on R version >= 3.5.0
