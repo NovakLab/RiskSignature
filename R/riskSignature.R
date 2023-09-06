@@ -21,6 +21,3 @@ riskSignature = function(expr_input,use_background=F) {
   scoredf$RiskClassification = ifelse(scoredf$RiskClassification >= 1,"high_risk",ifelse(scoredf$RiskClassification <= -1,"low_risk","intermediate_risk"))
   return(scoredf)
 }
-
-#contact: novak.joseph@mayo.edu
-
