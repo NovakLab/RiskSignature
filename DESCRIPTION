@@ -2,8 +2,8 @@ Package: RiskSignature
 Title: ndDLBCL EFS24 Risk Signature
 Version: 0.0.0.9000
 Authors@R: 
-    c(person("Joseph", "Novak", "novak.joseph@mayo.edu", role = c("aut", "cre")),
-    person("Kerstin", "Wenzl", "kerstin.wenzl@bms.com", role = c("aut")))
+    c(person(given="Joseph", family="Novak", email="novak.joseph@mayo.edu", role = c("aut", "cre")),
+    person(given="Kerstin", family="Wenzl", email="kerstin.wenzl@bms.com", role = "aut"))
 Description: Contains a function to generate EFS24 risk classifications for ndDLBCL bulk RNAseq profiles.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
