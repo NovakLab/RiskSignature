@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     c(person("Joseph", "Novak", "novak.joseph@mayo.edu", role = c("aut", "cre")),
     person("Kerstin", "Wenzl", "kerstin.wenzl@bms.com", role = c("aut")))
-Description: Contains a function to generate EFS24 risk classifications for ndDLBCL RNAseq profiles.
+Description: Contains a function to generate EFS24 risk classifications for ndDLBCL bulk RNAseq profiles.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
