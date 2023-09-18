@@ -10,5 +10,15 @@ Included
 2. riskgenes - Table consisting of RNA risk signature genes and direction
 3. background - Table consisting of a "universe" of genes analyzed during model training
 
+Usage
+
+```
+library(devtools)
+install_github("NovakLab/RiskSignature")
+library(RiskSignature)
+
+normalized_expression = read.csv("PATH/TO/EXPRESSION.csv")
+risk_classifications = riskSignature(expr_input=normalized_expression,background = T)
+```
 This package depends on R version >= 3.5.0
 
