@@ -2,12 +2,13 @@ This R package contains a function and data to reproduce the risk signature from
 
 Description
 
-“riskSignature.R” defines a workflow to reproduce Risk Signature classifications from the publication. Input required is a normalized bulk-RNAseq expression profile. It is suggested to length-normalize the input with log2(TPM+1). Input data must be formatted with row names as ensemblID and column names as sampleID. To generate the score, this workflow implements R package SingScore. An up-regulated geneset and a down-regulated geneset of risk associated features along with a list of background genes are provided.  An option is provided to include the “gene_background”. This is the set of attributes included in the original risk score generation.  When set to TRUE the input dataset is subset to contain only genes which are also present in the training dataset. 
+"riskSignature.R" defines a workflow to reproduce risk signature classifications from the publication. The input required is a normalized DLBCL bulk-RNAseq expression profile at diagnosis. It is suggested to length-normalize the input with log2(TPM+1). Input data must be formatted with row names as ensemblID and column names as sampleID. To generate the score, this workflow implements R package SingScore. An up-regulated geneset, a down-regulated geneset of risk-associated features, and a list of background genes are provided. An option is implemented to include the "gene_background," which is the set of attributes included in the original risk score generation. When set to TRUE, the input dataset is subset to contain only genes present in the training dataset. 
 
 Included
 
-1. riskSignature.R - R function which returns a dataframe of score information and risk classification
+1. riskSignature.R - R function which returns a data frame of score information and risk classification
 2. riskgenes - Table consisting of RNA risk signature genes and direction
 3. background - Table consisting of a "universe" of genes analyzed during model training
 
 This package depends on R version >= 3.5.0
+
