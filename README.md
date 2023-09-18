@@ -13,11 +13,15 @@ Included
 Usage
 
 ```
+#get package from github
 library(devtools)
 install_github("NovakLab/RiskSignature")
 library(RiskSignature)
 
+#load expression profile
 normalized_expression = read.csv("PATH/TO/EXPRESSION.csv")
+
+#perform classification
 risk_classifications = riskSignature(expr_input=normalized_expression,background = T)
 ```
 This package depends on R version >= 3.5.0
