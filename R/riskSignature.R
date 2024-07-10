@@ -2,8 +2,8 @@
 #' @export
 riskSignature = function(expr_input,use_background=F) {
   
-  if(max(expr_input)>50 | min(expr_input)<0){#check to see if data is log2 transformed
-    print("Check if data is log2+1 transformed.")
+  if(unlist(table(rownames(expr_input)%in%riskgenes$gene))[[2]][1]==0){#check to see if any genes are present
+    print("No signature genes found.")
   }
   
   sig_up = riskgenes$gene[which(riskgenes$direction=="up")] # upregulated genes
@@ -17,7 +17,9 @@ riskSignature = function(expr_input,use_background=F) {
   
   rankData = singscore::rankGenes(expr_input)
   scoredf = singscore::simpleScore(rankData,upSet = sig_up,downSet = sig_down)
-  scoredf$RiskClassification = as.vector(scale(scoredf$TotalScore))
-  scoredf$RiskClassification = ifelse(scoredf$RiskClassification >= 1,"high_risk",ifelse(scoredf$RiskClassification <= -1,"low_risk","intermediate_risk"))
+
+  #hard-coded totalscore cutpoints for single-sample testing
+  #if input is a representative population, the alternative is to use SD(scale(scoredf$TotalScore)>=1 and SD(scale(scoredf$TotalScore)<=-1
+  scoredf$RiskClassification = ifelse(scoredf$TotalScore >= .1818,"high_risk",ifelse(scoredf$TotalScore <= .0609,"low_risk","intermediate_risk"))
   return(scoredf)
 }
