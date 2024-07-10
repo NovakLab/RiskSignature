@@ -22,7 +22,7 @@ library(RiskSignature)
 normalized_expression = read.csv("PATH/TO/EXPRESSION.csv")
 
 #perform classification
-risk_classifications = riskSignature(expr_input=normalized_expression,background = T)
+risk_classifications = riskSignature(expr_input=normalized_expression,use_background = T)
 ```
 This package depends on R version >= 3.5.0
 
