@@ -1,6 +1,6 @@
 #EFS24 Signature Test
 #' @export
-riskSignature = function(expr_input,use_background=F) {
+riskSignature = function(expr_input,use_background=T) {
   
   if(unlist(table(rownames(expr_input)%in%riskgenes$gene))[[2]][1]==0){#check to see if any genes are present
     print("No signature genes found.")
