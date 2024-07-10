@@ -14,8 +14,8 @@ Usage
 
 ```
 #get package from github
-library(devtools)
-install_github("NovakLab/RiskSignature")
+library(remotes)
+remotes::install_github("NovakLab/RiskSignature")
 library(RiskSignature)
 
 #load expression profile
