@@ -2,7 +2,7 @@ This R package contains a function and data to reproduce the risk signature from
 
 Description
 
-"riskSignature.R" defines a workflow to reproduce risk signature classifications from the publication. The input required is a normalized bulk-RNAseq expression profile. It is suggested to length-normalize the input with TPM. Input data must be formatted with row names as ensemblID and column names as sampleID. To generate the score, this workflow implements R package SingScore. Normalized mean-rank scores are generated from a pair of up- and down-regulated genesets associated with progression risk. Additionally, a list of background genes are provided. An option, "use_background" is implemented to include the "gene_background", which is the set of attributes included in the original risk score generation. When set to TRUE, the input dataset is subset to contain only genes present in the training dataset. 
+"riskSignature.R" defines a workflow to reproduce risk signature classifications from the publication. The input required is a normalized bulk-RNAseq expression profile. It is suggested to length-normalize the input with TPM. Input data must be formatted with row names as ensemblID and column names as sampleID. To generate the score, this workflow implements R package SingScore. Normalized mean-rank scores are generated from a pair of up- and down-regulated genesets associated with disease progression. Additionally, a list of background genes are provided. An option, "use_background" is implemented to include the "gene_background", which is the set of attributes included in the original risk score generation. When set to TRUE, the input dataset is subset to contain only genes present in the training dataset. 
 
 Included
 
